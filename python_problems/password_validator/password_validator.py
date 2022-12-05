@@ -8,6 +8,9 @@ lowercase = list("abcdefghijklmnopqrstuvwxyz")
 uppercase= list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 validchars = list(lowercase+uppercase+numbers+specialchars)
 
+print("Enter your password below")
+password = input()
+
 #below is the validation function, which will tell us if the password is Invalid, Secure or Insecure
 def validate(password):
     size = len(password)
@@ -20,9 +23,9 @@ def validate(password):
     #validity check
     for char in lpswd:
             if char in invalidchars:
-                return ("Invalid")
+                return ("The password entered above is **Invalid**")
             elif size < 8:
-                return ("Invalid")
+                return ("The password entered above is **Invalid**")
             else:
                 status = ('valid')
     #security check  
@@ -37,9 +40,9 @@ def validate(password):
             if char in specialchars:
                 special =True
         if lcase == True and ucase== True and  digits == True and special ==True:
-            return  ('Secure')
+            return  ('The password entered above is Secure')
         else:
-            return ('Insecure') 
+            return ('The password entered above is **Insecure**') 
 #below is the function used to generate the random password
 def generate(n):
     ucase = False
@@ -64,3 +67,13 @@ def generate(n):
     else:
         return ("password length is invalid")
     return (newpassword)
+
+print(validate(password))
+
+print( "do you want to generate a password?(Type yes/no)")
+ans = input()
+if ans == "yes":
+	print("Specify the length of the password below (enter a number)")
+	length = input()
+	length = int(length)
+	print(generate(length))
