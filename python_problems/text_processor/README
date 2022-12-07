@@ -1,0 +1,12 @@
+INSTRUCTIONS
+
+The program frequency.py will give you the frequency of occurence of a each word in a block of text.
+
+step 1 - Paste the block of text that has to processed into the file "input.txt"
+step 2 - Open a terminal window and open the directory "text_processor"
+step 3 - Enter the below command into the terminal window
+
+		" python3 frequency.py input.txt"
+
+Once these steps are excecuted the terminal window will display the frequency of each word in the block text
+The result of this program will be written onto file called "input.txt.out" in the same directory
